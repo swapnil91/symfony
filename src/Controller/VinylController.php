@@ -16,4 +16,10 @@ class VinylController
         return new Response('Test Title: Music Director Pritam');
     }
 
+    #[Route('/browse/{slug}')]
+    public function browse($slug = null): Response
+    {
+        return new Response('Genre: '.$slug);
+    }
+
 }
