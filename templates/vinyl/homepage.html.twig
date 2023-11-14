@@ -1,5 +1,16 @@
+{# This below line is template inheritance which tell twig engine to put our code inside that template
+ This looks similar to Object Oriented Program where each template is like a CLASS & each block is like a method #}
+{% extends 'base.html.twig' %}
+
+{# Below block is having parent function which includes parent same block content before ours. #}
+{% block title %}
+    {{ parent() }} - New Record Here.
+{% endblock %}
+{# Bellow block body tag tell twig put my code inside body block in above inherited template #}
+{% block body %}
 <h1>{{ title }}</h1>
 
 <div>
     HELLO TWIG!
 </div>
+{% endblock %}
